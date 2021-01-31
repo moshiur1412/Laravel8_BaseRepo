@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
-class CrudController{
+class CrudController extends BaseController{
 
 
 	public function index(){
-		return "This is the cruds.index";
+
+		\Log::info("Req=CrudController@index called");
+
+		$this->setPageTitle('Cruds Index', 'List of All Data');
+
+		return view('cruds.index');
 	}
 
 }
